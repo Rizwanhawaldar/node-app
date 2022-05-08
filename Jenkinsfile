@@ -6,7 +6,8 @@ pipeline {
     stages{
         stage ('build Docker Image'){
            steps{
-               sh "docker build -t rizwan/nodeapp:${DOCKER_TAG} ."
+               sh "cd /home/ubuntu"
+               sh " sudo docker build -t rizwan/nodeapp:${DOCKER_TAG} ."
            }
     } 
        } 
