@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage ('build Docker Image'){
            steps{
-               sh "docker build -t rizwan/nodeapp: ${DOCKER_TAG}"
+               sh "docker build -t rizwan/nodeapp:${DOCKER_TAG}"
            }
     } 
        } 
