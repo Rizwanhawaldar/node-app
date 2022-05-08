@@ -34,11 +34,13 @@ pipeline {
                       sh "cd /home/ubuntu"
                       script {
                           try{
-                            sh "ssh ubuntu@34.212.175.62 kubectl apply -f ."
+                            sh "ssh ubuntu@34.212.175.62 kubectl apply -f node-app-pod.yml"
+                             sh "ssh ubuntu@34.212.175.62 kubectl apply -f services.yml"  
+                              
 
                           }catch (error){
-                                sh "ssh ubuntu@34.212.175.62 kubectl create -f ."
-
+                                 sh "ssh ubuntu@34.212.175.62 kubectl create -f node-app-pod.yml"
+                                 sh "ssh ubuntu@34.212.175.62 kubectl create -f services.yml"  
                      }
                  }
              }
