@@ -30,6 +30,8 @@ pipeline {
                  sshagent(['master']){
 
                       sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml ubuntu@34.212.175.62:/home/ubuntu"
+                      sh "sudo su"
+                      sh "cd /home/ubuntu"
                       script {
                           try{
                             sh "ssh ubuntu@34.212.175.62 kubectl apply -f ."
