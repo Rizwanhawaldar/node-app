@@ -8,7 +8,7 @@ pipeline {
            steps{
                sh "sudo su"
                sh "cd /home/ubuntu"
-               sh "docker build -t rizwan/nodeapp:${DOCKER_TAG} ."
+               sh "sudo docker build -t rizwan/nodeapp:${DOCKER_TAG} . "
            }
     } 
        } 
