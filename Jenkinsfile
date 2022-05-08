@@ -14,11 +14,13 @@ pipeline {
 
          stage("DockerHub push"){
 
-
-             withCredentials([string(credetialsId: "docker-hub", variable: 'dockerHubPwd')]){
-                 sh "docker login -u rizwanhawaldar -p ${dockerHubPwd}"
-                 sh "docker push  rizwan/nodeapp:${DOCKER_TAG} "
+             steps{
+                 withCredentials([string(credetialsId: "docker-hub", variable: 'dockerHubPwd')]){
+                   sh "docker login -u rizwanhawaldar -p ${dockerHubPwd}"
+                   sh "docker push  rizwan/nodeapp:${DOCKER_TAG} "
              }
+             }
+                 
          }
        } 
 
