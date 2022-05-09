@@ -6,7 +6,7 @@ spec:
  containers:
   - command:
     - kube-controller-manager
-    - --cloud-provider=aws
+    - cloud-provider=aws
   selector:
     app: nodeapp
   ports:
