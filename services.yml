@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: nodeapp
 spec:
-  type: loadBalancer
+  type: LoadBalancer
   selector:
     app: nodeapp
     
