@@ -29,7 +29,7 @@ pipeline {
                  sh "./changeTag.sh ${DOCKER_TAG}"
                  sshagent(['master']){
 
-                      sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml ubuntu@34.212.175.62:/home/ubuntu"
+                      sh "scp -o StrictHostKeyChecking=no services.yml node-app-pod.yml controller.yml ubuntu@34.212.175.62:/home/ubuntu"
                       sh "sudo su"
                       sh "cd /home/ubuntu"
                       script {
