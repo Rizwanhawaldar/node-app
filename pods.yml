@@ -9,4 +9,4 @@ spec:
     - name: nodeapp
       image: rizwanhawaldar/nodeapp:tagVersion
       ports:
-        - containerPort: 8101
+        - containerPort: 8080
