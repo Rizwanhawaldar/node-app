@@ -9,4 +9,5 @@ spec:
   - protocol: TCP
     port: 8291
     targetPort: 8101
+    externalIp: 34.222.254.42
   type: LoadBalancer   
