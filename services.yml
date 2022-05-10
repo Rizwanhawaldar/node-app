@@ -10,7 +10,7 @@ spec:
   ports:
   - protocol: TCP
     port: 8291
-    nodePort: 30036
+    nodePort: 30037
     
     
  
