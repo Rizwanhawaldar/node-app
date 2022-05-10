@@ -5,10 +5,11 @@ metadata:
 spec:
   selector:
     app: nodeapp
-    externalIps: 34.222.254.42
+    
   ports:
   - protocol: TCP
     port: 8291
     targetPort: 8101
     
-  type: LoadBalancer   
+  type: LoadBalancer  
+  externalIps: 34.222.254.42
