@@ -3,6 +3,7 @@ apiVersion: v1
 metadata:
   name: nodeapp
 spec:
+  type: LoadBalancer
   selector:
     app: nodeapp
     
@@ -11,5 +12,4 @@ spec:
     port: 8291
     targetPort: 8101
     
-  type: LoadBalancer  
-  externalIps: 34.222.254.42
+ 
