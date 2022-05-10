@@ -3,13 +3,14 @@ apiVersion: v1
 metadata:
   name: nodeapp
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: nodeapp
     
   ports:
   - protocol: TCP
     port: 8291
-    targetPort: 8101
+    nodePort: 30036
+    
     
  
